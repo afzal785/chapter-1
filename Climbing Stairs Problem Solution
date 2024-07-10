@@ -1,0 +1,13 @@
+def climbStairs(n):
+    if n == 1:
+        return 1
+    first, second = 1, 2
+    for i in range(3, n + 1):
+        third = first + second
+        first = second
+        second = third
+    return second
+n1 = 4
+print(climbStairs(n1))  # Output: 5
+n2 = 3
+print(climbStairs(n2))  # Output: 3
